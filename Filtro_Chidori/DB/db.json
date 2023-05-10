@@ -1,0 +1,92 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nombre": "Sebastian",
+      "user": "Socio2k",
+      "password": "Manu159753",
+      "email": "sebas201154@gmail.com"
+    },
+    {
+      "nombre": "dani",
+      "user": "sixfinger",
+      "password": "manu123",
+      "email": "sebas@gmail.com",
+      "id": 2
+    }
+  ],
+  "categoria": [
+    {
+      "id": 1,
+      "nombre": "electrodomesticos",
+      "descripcion": "Computadores de gamma alta"
+    },
+    {
+      "nombre": "ropa",
+      "descripcion": "Ropa para mujeres",
+      "id": 2
+    }
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Computador",
+      "precio": 4500000,
+      "stock": 35,
+      "idCategoria": 1
+    },
+    {
+      "nombre": "Tele",
+      "precio": "500000",
+      "stock": "15",
+      "idCategoria": "electrodomestico",
+      "id": 2
+    }
+  ],
+  "clientes": [
+    {
+      "id": 1,
+      "imagen": "luis.jpg",
+      "nombre": "luis Herrera",
+      "direccion": "calle 109 #15-67",
+      "telefono": 3227309144
+    }
+  ],
+  "VentasFactura": [
+    {
+      "id": 1,
+      "cliente": "1",
+      "empleado": "1",
+      "fecha": "14/05/2023"
+    }
+  ],
+  "DetallesFactura": [
+    {
+      "id": 1,
+      "factura": 1,
+      "producto": "1",
+      "canidad": 10
+    },
+    {
+      "factura": "2023-05-10",
+      "producto": "1",
+      "canidad": "15",
+      "id": 2
+    },
+    {
+      "factura": "2023-05-25",
+      "producto": "1",
+      "canidad": "15",
+      "id": 3
+    }
+  ],
+  "Compras": [
+    {
+      "id": 1,
+      "fecha": "20/07/2022",
+      "producto": "1",
+      "cantidad": "15",
+      "proovedor": "Sony"
+    }
+  ]
+}

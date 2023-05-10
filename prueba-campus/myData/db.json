@@ -1,0 +1,45 @@
+{
+    "clientes":[
+        {
+            "nroIdentificacion":"",
+            "nombres":"",
+            "apellidos":"",
+            "telefono":"",
+            "fechanac":"",
+            "ciudadOrigen":"",
+            "paisOrigen":"",
+            "email":"",
+            "createdAT":""
+        }
+
+    ],
+    "rutasAereas":[
+        {
+            "nombreRuta":"",
+            "ciudad":"",
+            "ciudadDestino":"",
+            "totalMillas":"",
+            "valorMilla":""
+        }
+    ],
+    "flotaAerea":[
+        {
+            "nroAeronave":"",
+            "cantidadPasajeros":"",
+            "fechaCompra":"",
+            "valorCompra":"",
+            "nroMatricula":""
+        }
+    ],
+    "personal":[
+        {
+            "cc":"",
+            "nombre":"",
+            "apellido":"",
+            "correo":"",
+            "profesion":"",
+            "celular":"",
+            "numeroMovil":""
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+}
+#tabla{
+   margin-top: 40px;
+   border: double;
+   
+}
+.card{
+    background-color: aqua;
+}

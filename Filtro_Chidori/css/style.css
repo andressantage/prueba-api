@@ -1,0 +1,66 @@
+body{
+    background-image: url(/img/fondo.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenedorLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedorLogin form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: .5rem;
+}
+
+.contenedorLogin input{
+    border-radius: .5rem;
+    border: solid rgb(52, 33, 87);
+    color: whitesmoke;
+    background-image: url("https://usagif.com/wp-content/uploads/gif/outerspace-53.gif");
+}
+
+.contenedorLogin h3{
+    color: whitesmoke;
+}
+
+.modal-content{
+    background-image: url("https://usagif.com/wp-content/uploads/gif/outerspace-78.gif");
+}
+
+.saveLog{
+    border-radius: .5rem;
+    border: solid rgb(52, 33, 87);
+    background-image: url("https://img.pikbest.com/backgrounds/20190531/colorful-nebula-space-gif-background-design_2828221.jpg!bwr800");
+}
+
+.registro{
+    background-color: rgb(0,0,0,0) !important;
+    border: solid white !important;
+}
+
+.registro:hover{
+    border: solid aquamarine !important;
+    color: aquamarine !important;
+}
+
+.interface{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.textoInicio h2{
+    color: aquamarine;
+    font-size: 2rem;
+}
+
+.textoInicio h1{
+    color: white;
+    font-size: 4rem;
+}

@@ -1,0 +1,71 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    padding-bottom: 5rem;
+}
+
+header img{
+    width: 55rem;
+}
+
+body{
+    background-color: black;
+}
+.card{
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 23rem;
+    padding: 2rem 0px;
+    background-color: white;
+    transition: all 0.4s ease;
+}
+.card img{
+    width: 20rem;
+}
+.padre{
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+.contenedor{
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.contenido{
+    padding-top: 0.8rem;
+    text-align: center;
+}
+
+.nombre{
+    font-size: 2rem;
+    font-weight: bolder;
+    padding-bottom: 0.3rem;
+}
+.anio{
+    padding-bottom: 0.5rem;
+}
+
+.boton{
+    background-color: rgb(53, 127, 245);
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    width: 12rem;
+    height: 3rem;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.card:hover{
+    transform: scale(1.05);
+}

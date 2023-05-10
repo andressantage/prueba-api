@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campers</title>
+  <link rel="icon" type="images/png" href="/images/logo campus-ai.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/profesores.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,800;1,400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="d-flex " style="width: 20%;">
+    <div id="div2">
+      <!-- menu -->
+      <div class="">
+          
+          <img src="/img/campuslogo.png" alt="Bootstrap" width="52" height="44" class="mb-5 imagenLogo"> 
+        
+        <ul class="navbar-nav  mb-2 mb-lg-0 d-flex justify-content-start ">
+          <li class="nav-item  d-flex gap-3 " style="display:flex; align-items: center;">
+            <i class="bi bi-person-square text-white"></i>
+            <a class="nav-link active texcolor3" aria-current="page" href="inicio.html" style="cursor:pointer;">List Clientes</a>
+            
+          </li>
+          <li class="nav-item  d-flex gap-3 " style="display:flex; align-items: center;">
+            <i class="bi bi-journal-plus text-white"></i>
+            <a class="nav-link texcolor3" type="submit" data-bs-toggle="modal"
+            data-bs-target="#registerCamper" href="#" style="cursor:pointer;">Create Cliente</a>
+          </li>
+          <li class="nav-item  d-flex gap-3 " style="display:flex; align-items: center;">
+            <i class="bi bi-person-square text-white"></i>
+            <a class="nav-link active texcolor3" aria-current="page" href="#" id="categorias" style="cursor:pointer;">List Categorias</a>
+          <li class="nav-item dropdown" style="cursor:pointer;">
+          </li>
+          <li class="nav-item  d-flex gap-3 " style="display:flex; align-items: center;">
+            <i class="bi bi-journal-plus text-white"></i>
+            <a class="nav-link texcolor3" type="submit" data-bs-toggle="modal"
+            data-bs-target="#registerCategory" href="#" style="cursor:pointer;">Create Categoria</a>
+          </li>
+          <li class="nav-item  d-flex gap-3 " style="display:flex; align-items: center;">
+            <i class="bi bi-person-square text-white"></i>
+            <a class="nav-link active texcolor3" aria-current="page" href="#" id="producto" style="cursor:pointer;">List productos</a>
+          <li class="nav-item dropdown" style="cursor:pointer;">
+          </li>
+          <li class="nav-item  d-flex gap-3 " style="display:flex; align-items: center;">
+            <i class="bi bi-journal-plus text-white"></i>
+            <a class="nav-link texcolor3" type="submit" data-bs-toggle="modal"
+            data-bs-target="#registerProducto" href="#" style="cursor:pointer;">Create producto</a>
+          </li>
+          <li class="nav-item  d-flex gap-3 " style="display:flex; align-items: center;">
+            <i class="bi bi-person-square text-white"></i>
+            <a class="nav-link active texcolor3" aria-current="page" href="#" id="factura" style="cursor:pointer;">List Ventas</a>
+          <li class="nav-item dropdown" style="cursor:pointer;">
+          </li>
+          <li class="nav-item  d-flex gap-3 " style="display:flex; align-items: center;">
+            <i class="bi bi-journal-plus text-white"></i>
+            <a class="nav-link texcolor3" type="submit" data-bs-toggle="modal"
+            data-bs-target="#regisventa" href="#" style="cursor:pointer;">Create VentaFactura</a>
+          </li>
+          <li class="nav-item  d-flex gap-3 " style="display:flex; align-items: center;">
+            <i class="bi bi-person-square text-white"></i>
+            <a class="nav-link active texcolor3" aria-current="page" href="#" id="detalles" style="cursor:pointer;">List Detalles</a>
+          <li class="nav-item dropdown" style="cursor:pointer;">
+          </li>
+          <li class="nav-item  d-flex gap-3 " style="display:flex; align-items: center;">
+            <i class="bi bi-journal-plus text-white"></i>
+            <a class="nav-link texcolor3" type="submit" data-bs-toggle="modal"
+            data-bs-target="#regisDetalle" href="#" style="cursor:pointer;">Create Detalles</a>
+          </li>
+          <li class="nav-item  d-flex gap-3 " style="display:flex; align-items: center;">
+            <i class="bi bi-person-square text-white"></i>
+            <a class="nav-link active texcolor3" aria-current="page" href="#" id="compra" style="cursor:pointer;">List Compras</a>
+          <li class="nav-item dropdown" style="cursor:pointer;">
+          </li>
+          <li class="nav-item  d-flex gap-3 " style="display:flex; align-items: center;">
+            <i class="bi bi-journal-plus text-white"></i>
+            <a class="nav-link texcolor3" type="submit" data-bs-toggle="modal"
+            data-bs-target="#regisCompras" href="#" style="cursor:pointer;">Create Compras</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" id="regisDetalle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header color1">
+        <h1 class="modal-title fs-5 headerr" id="exampleModalLabel">Register Compras</h1>
+      </div>
+      <div class="modal-body">
+        <form id="formularioDetalles" class="row g-3"  method="POST">
+
+
+          <div class="col-md-12">
+            <label for="facturaDetalles" class="form-label headerr">factura</label>
+            <input type="date" class="form-control" id="facturaDetalles">
+          </div>
+         
+          <div class="col-md-8">
+            <label for="productoDetalle" class="form-label headerr">producto</label>
+            <input type="text" class="form-control" id="productoDetalle">
+          </div>
+    
+          
+          <div class="col-4">
+            <label for="cantidadDetalle" class="form-label headerr">cantidad</label>
+            <input type="text" class="form-control" id="cantidadDetalle">
+          </div>
+
+      </div>
+      <div class="modal-footer ">
+        <button type="button" class="btn btn-secondary color3 border3 headerr" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn color5 color-heder headerr" data-bs-toggle="modal"
+          data-bs-target="#exampleModal2">Enviar Registro</button>
+      </div>
+    </div>
+    </form> 
+  </div>
+  
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="regisCompras" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header color1">
+        <h1 class="modal-title fs-5 headerr" id="exampleModalLabel">Register Compras</h1>
+      </div>
+      <div class="modal-body">
+        <form id="formularioCompra" class="row g-3"  method="POST">
+
+
+          <div class="col-md-12">
+            <label for="FechaCompra" class="form-label headerr">Fecha</label>
+            <input type="date" class="form-control" id="FechaCompra">
+          </div>
+         
+          <div class="col-md-8">
+            <label for="productoCompra" class="form-label headerr">producto</label>
+            <input type="text" class="form-control" id="productoCompra">
+          </div>
+    
+          
+          <div class="col-4">
+            <label for="cantidad" class="form-label headerr">cantidad</label>
+            <input type="text" class="form-control" id="cantidad">
+          </div>
+          <div class="col-12">
+            <label for="proovedor" class="form-label headerr">proovedor</label>
+            <input type="text" class="form-control" id="proovedor">
+          </div>    
+      </div>
+      <div class="modal-footer ">
+        <button type="button" class="btn btn-secondary color3 border3 headerr" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn color5 color-heder headerr" data-bs-toggle="modal"
+          data-bs-target="#exampleModal2">Enviar Registro</button>
+      </div>
+    </div>
+    </form> 
+  </div>
+  
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="regisventa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header color1">
+        <h1 class="modal-title fs-5 headerr" id="exampleModalLabel">Register Venta</h1>
+      </div>
+      <div class="modal-body">
+        <form id="formularioVenta" class="row g-3"  method="POST">
+
+
+          <div class="col-md-12">
+            <label for="nombreCliente" class="form-label headerr">nombreCliente</label>
+            <input type="text" class="form-control" id="nombreCliente">
+          </div>
+         
+          <div class="col-md-8">
+            <label for="nombreEmpleado" class="form-label headerr">nombreEmpleado</label>
+            <input type="text" class="form-control" id="nombreEmpleado">
+          </div>
+    
+          
+          <div class="col-4">
+            <label for="fecha" class="form-label headerr">Fecha</label>
+            <input type="date" class="form-control" id="fecha">
+          </div>  
+      </div>
+      <div class="modal-footer ">
+        <button type="button" class="btn btn-secondary color3 border3 headerr" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn color5 color-heder headerr" data-bs-toggle="modal"
+          data-bs-target="#exampleModal2">Enviar Registro</button>
+      </div>
+    </div>
+    </form> 
+  </div>
+  
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="registerCamper" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header color1">
+        <h1 class="modal-title fs-5 headerr" id="exampleModalLabel">Register Cliente</h1>
+      </div>
+      <div class="modal-body">
+        <form id="formulario" class="row g-3"  method="POST">
+
+
+          <div class="col-md-12">
+            <label for="nombre" class="form-label headerr">nombre</label>
+            <input type="text" class="form-control" id="nombre">
+          </div>
+         
+          <div class="col-md-8">
+            <label for="Direccion" class="form-label headerr">Direccion</label>
+            <input type="text" class="form-control" id="Direccion">
+          </div>
+    
+          
+          <div class="col-4">
+            <label for="telefono" class="form-label headerr">telefono</label>
+            <input type="text" class="form-control" id="telefono">
+          </div>  
+      </div>
+      <div class="modal-footer ">
+        <button type="button" class="btn btn-secondary color3 border3 headerr" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn color5 color-heder headerr" data-bs-toggle="modal"
+          data-bs-target="#exampleModal2">Enviar Registro</button>
+      </div>
+    </div>
+    </form> 
+  </div>
+  
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="registerProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header color1">
+        <h1 class="modal-title fs-5 headerr" id="exampleModalLabel">Register Producto</h1>
+      </div>
+      <div class="modal-body">
+        <form id="formularioProduct" class="row g-3"  method="POST">
+
+
+          <div class="col-md-12">
+            <label for="nombrepro" class="form-label headerr">nombre</label>
+            <input type="text" class="form-control" id="nombrepro">
+          </div>
+         
+          <div class="col-md-8">
+            <label for="Precio" class="form-label headerr">Precio</label>
+            <input type="text" class="form-control" id="Precio">
+          </div>
+    
+          
+          <div class="col-4">
+            <label for="Stock" class="form-label headerr">Stock</label>
+            <input type="text" class="form-control" id="Stock">
+          </div>
+          
+          <div class="col-4">
+            <label for="categoria" class="form-label headerr">categoria</label>
+            <input type="text" class="form-control" id="categoria">
+          </div>  
+      </div>
+      <div class="modal-footer ">
+        <button type="button" class="btn btn-secondary color3 border3 headerr" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn color5 color-heder headerr" data-bs-toggle="modal"
+          data-bs-target="#exampleModal2">Enviar Registro</button>
+      </div>
+    </div>
+    </form> 
+  </div>
+  
+</div>
+
+<div class="modal fade" id="registerCategory" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header color1">
+          <h1 class="modal-title fs-5 headerr" id="exampleModalLabel">Register Cliente</h1>
+        </div>
+        <div class="modal-body">
+          <form id="formularioCategoria" class="row g-3"  method="POST">
+  
+  
+            <div class="col-md-12">
+              <label for="nombrecate" class="form-label headerr">nombre</label>
+              <input type="text" class="form-control" id="nombrecate">
+            </div>
+           
+            <div class="col-md-12">
+              <label for="descripcion" class="form-label headerr">DESCRIPCION</label>
+              <input type="text" class="form-control" id="descripcion">
+            </div>
+      
+            
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-secondary color3 border3 headerr" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn color5 color-heder headerr" data-bs-toggle="modal"
+            data-bs-target="#exampleModal2">Enviar Registro</button>
+        </div>
+      </div>
+      </form> 
+    </div>
+    
+  </div>
+
+
+  <!-- //////////////////////////////////////Campers Dynamic Table-->
+  <div  class="div2 alertaAlerta" style="background-color: #233249;">
+    <div class="sub-menu d-flex justify-content-between menu-cuenta " >
+
+      <div class="divcueta border-bottom ">
+        <div class="ps-2">
+          <h5 class="texcolor3">SISTEMA DE FACTURACION</h5>
+          <h6 class="texcosize">Y MARKETING</h6>
+        </div>
+      </div>
+      <div class="align-items-center d-flex gap-3 margin-rigth">
+        <a href=""><i class="bi bi-envelope text-white" style="font-size: 1.5rem; cursor:pointer "></i></a>
+        <a href=""><i class="bi bi-bell text-white " style="font-size: 1.5rem; cursor:pointer "></i></a>
+        <a href=""><i class="bi bi-person-square text-white" style="font-size: 1.5rem; cursor:pointer "></i></a>
+      </div>
+    </div>
+    
+        <!-- DINAMYC TABLE -->
+        <div id="div3" class="conta">
+          <table id="menuBarra"class="table">
+            
+            <thead class="menu-busqueda">
+                  <tr >
+                      <th scope="col">ID</th>
+                      <th scope="col">IMAGEN</th>
+                      <th scope="col">NOMBRE</th>
+                      <th scope="col">CELULAR</th>
+                      <th scope="col">DIRECCION</th>
+                      <th scope="col">DETALLES</th>
+                      <th scope="col">BORRAR</th>
+                  </tr>
+            </thead>
+                  <tbody id="container" class="table-group-divider lista">
+                 
+                  </tbody>
+          </table>
+        </div>
+        <footer class="w- d-flex align-items justify-content-center">
+          <p class="fs-5 px-2 pt-2">Designed and made by Campers Maicol y Marcela</p>
+        </footer>
+  </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+    <!-- <script src="js/campers.js"></script>  -->
+   <script src="/js/app.js" type="module"></script>
+   <script src="/js/newData.js" type="module"></script>
+
+  
+  
+
+</body>
+
+</html>
